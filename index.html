@@ -83,6 +83,7 @@
         <option value="13">№13 リベラルハイツ</option>
         <option value="23">№23 ガスエアコン対応</option>
         <option value="28">№28 新規獲得推進用</option>
+        <option value="30">№30 高橋理容所他</option>
       </select>
     </div>
 
@@ -124,12 +125,13 @@
 
   <script>
     const plans = {
-      5: { base: 1850, tiers: [{ limit: 20, rate: 730 }, { limit: Infinity, rate: 680 }] },
-      12: { base: 1100, tiers: [{ limit: 8, rate: 480 }, { limit: 30, rate: 430 }, { limit: Infinity, rate: 380 }] },
-      13: { base: 1500, tiers: [{ limit: Infinity, rate: 590 }] },
-      23: { base: 1600, tiers: [{ limit: 5, rate: 730 }, { limit: Infinity, rate: 540 }] },
-      28: { base: 1600, tiers: [{ limit: 15, rate: 690 }, { limit: 30, rate: 670 }, { limit: Infinity, rate: 630 }] }
-    };
+  5: { base: 1850, tiers: [{ limit: 20, rate: 730 }, { limit: Infinity, rate: 680 }] },
+  12: { base: 1100, tiers: [{ limit: 8, rate: 480 }, { limit: 30, rate: 430 }, { limit: Infinity, rate: 380 }] },
+  13: { base: 1500, tiers: [{ limit: Infinity, rate: 500 }] },
+  23: { base: 1000, tiers: [{ limit: 5, rate: 730 }, { limit: Infinity, rate: 540 }] },
+  28: { base: 1000, tiers: [{ limit: 15, rate: 690 }, { limit: 30, rate: 670 }, { limit: Infinity, rate: 630 }] },
+  30: { base: 1650, tiers: [{ limit: 5, rate: 730 }, { limit: Infinity, rate: 570 }] }
+};
 
     function calculateBill(planNumber, usage, days) {
       const plan = plans[planNumber];
