@@ -78,6 +78,7 @@
       <label for="plan">料金プラン</label>
       <select id="plan">
         <option value="">--選択してください--</option>
+        <option value="3">№3(№53)一般料金移行</option>
         <option value="5">№5(№50)</option>
         <option value="12">№12 メイプルナハーゼ</option>
         <option value="13">№13 リベラルハイツ</option>
@@ -127,6 +128,7 @@
 
   <script>
     const plans = {
+  3: { base: 1650, tiers: [{ limit: 10, rate: 670 }, { limit: Infinity, rate: 570 }] },
   5: { base: 1850, tiers: [{ limit: 20, rate: 800 }, { limit: Infinity, rate: 750 }] },
   12: { base: 1100, tiers: [{ limit: 8, rate: 550 }, { limit: 30, rate: 500 }, { limit: Infinity, rate: 450 }] },
   13: { base: 1500, tiers: [{ limit: Infinity, rate: 660 }] },
